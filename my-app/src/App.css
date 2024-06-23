@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+}
+
+
+.App {
+  width: 100vw;
+}
+/* .all_content {
+  width: 800px;
+} */
+
+.all_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 800px; 
+  width: 100%;
+}
+
+.post  {
+  display: flex;
+  padding: 15px;
+  border: 2px solid teal;
+  margin: 15px;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+
+}
+
+
+.post-enter {
+  transform: translateX(-350px);
+}
+.post-enter-active {
+  transform: translateX(0px);
+  transition: all 500ms ease-in;
+}
+.post-exit {
+  opacity: 1;
+}
+.post-exit-active {
+  transform: translateX(-350px);
+  transition: all 500ms ease-in;
+}
+
+/* тут все для хэдера */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100vw;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  margin-left: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 1em;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #0056b3;
+}
+
+
+/* тут все для футера */
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* тут хотела анимацию в футере сделать с бетменом, но чот не работает, как пофиксю - скину код */
+
+.batman-animation {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.batman {
+  width: 80px;
+  animation: fly 5s linear infinite;
+}
+
+@keyframes fly {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(100px, -50px) rotate(20deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+
+/* блок с описанием */
+.description {
+  background-color: #f8f9fa;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.description h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.description p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
